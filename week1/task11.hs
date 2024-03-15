@@ -7,9 +7,9 @@ main = do
     print $ rev 176 == 671 -- my test
 
 rev :: Int -> Int
-rev n 
- | n < 0 = error "parameter n should be non-negative"
- | otherwise = helper n 0
+rev num 
+ | num < 0 = error "parameter n should be non-negative"
+ | otherwise = helper num 0
  where
     helper :: Int -> Int -> Int
     helper 0 result = result

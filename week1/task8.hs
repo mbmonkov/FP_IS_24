@@ -11,8 +11,8 @@ main = do
 
 canCarry :: Int -> Double -> Double -> String
 canCarry c k w
- | c < 0 = error "number of products c should be non-negative"
- | k < 0 = error "kilograms should be non-negative"
- | w < 0 = error "weighs kilograms should be non-negative" 
+ | c < 0 = error "Number of products c should be non-negative."
+ | k < 0 = error "Kilograms should be non-negative."
+ | w < 0 = error "Weighs kilograms should be non-negative." 
  | k >= fromIntegral c * w = "Yes"
  | otherwise = "No"

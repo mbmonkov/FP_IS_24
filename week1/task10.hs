@@ -6,7 +6,7 @@ main = do
     print $ snail 10 3 2 == 8
     print $ snail 100 20 5 == 7
     print $ snail 5 10 3 == 1
-    print $ snail 8 5 3 == 3 -- my test
+    print $ snail 8 5 4 == 4 -- my test
 
 snail :: Int -> Int -> Int -> Int
 snail heightNeeded dayDistance nightDistance = helper dayDistance 1
