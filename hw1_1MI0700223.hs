@@ -33,7 +33,7 @@ maxPersistenceMinSum start end = helper start end start -- Подаваме на
      | start > end = maxPersistence
      | persistence start > (persistence maxPersistence) = helper (start + 1) end start -- намиране на число с по-добра устойчивост и сътвотетно поставяме него за maxPersistence 
      | persistence start == persistence maxPersistence && sumDigits start < sumDigits maxPersistence = helper (start + 1) end start -- намиране на число с по-добра устойчивост по критериите, 
-     | otherwise = helper (start + 1) end maxPersistence -- извивакване на ф-я, като продължаваме проверката (+1)                                                                          --  когато числата са с равна устойчивост и сътвотетно
+     | otherwise = helper (start + 1) end maxPersistence -- извивакване на ф-я, като продължаваме проверката (+1)                   --  когато числата са с равна устойчивост и сътвотетно
                                                                                                                                     --  поставяме него за maxPersistence
 
 persistence :: Int -> Int -- ф-я, която връща устойчивостта на число
