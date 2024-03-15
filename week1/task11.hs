@@ -8,7 +8,7 @@ main = do
 
 rev :: Int -> Int
 rev n 
- | n < 0 = -100
+ | n < 0 = error "parameter n should be non-negative"
  | otherwise = helper n 0
  where
     helper :: Int -> Int -> Int

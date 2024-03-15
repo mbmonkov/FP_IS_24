@@ -12,12 +12,17 @@ main = do
 
 finalGrade :: Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double
 finalGrade d1 d2 d3 kz1 kz2 kt1 kt2 iz it 
- |0.5 * tk (averageHomework d1 d2 d3) (averageK kz1 kz2) (averageK kt1 kt2) 
-                                     + 0.25 * whichGrade kz1 kz2 iz
-                                     + 0.25 * whichGrade kt1 kt2 iz < 2 = 2
- |otherwise = (fromIntegral $ round $ (0.5 * tk (averageHomework d1 d2 d3) (averageK kz1 kz2) (averageK kt1 kt2) 
-                                     + 0.25 * whichGrade kz1 kz2 iz
-                                     + 0.25 * whichGrade kt1 kt2 iz) * 100) / 100
+ |grade d1 d2 d3 kz1 kz2 kt1 kt2 iz it < 2 = 2
+ |otherwise = roundTwoDig (grade d1 d2 d3 kz1 kz2 kt1 kt2 iz it) 
+
+grade :: Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double -> Double
+grade d1 d2 d3 kz1 kz2 kt1 kt2 iz it = 1/2 * tk (averageHomework d1 d2 d3) (averageK kz1 kz2) (averageK kt1 kt2)
+                                        + 1/4 * whichGrade kz1 kz2 iz
+                                        + 1/4 * whichGrade kt1 kt2 it
+
+roundTwoDig :: Double -> Double
+roundTwoDig n = (fromIntegral $ round $ n * 100) / 100
+
 
 whichGrade :: Double -> Double -> Double -> Double 
 whichGrade k1 k2 exam  
