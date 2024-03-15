@@ -1,60 +1,3 @@
-### 💫 Task 1
-
-**Description:**
-
-Answer the following questions:
-
-1. Which is correct: *x \`mod\` y* or *mod x y*? Why?
-2. When is the use of an infix application of an otherwise prefix function permissive?
-3. What is the dollar sign - `$`?
-4. How do we read the dollar sign?
-5. Why should we use the dollar sign?
-6. When do we say that a function is defined on a functional level?
-7. What is the process of turning a regular function definition into one that is defined on a functional level?
-8. What are `guards`?
-9. Should we use `guards` or `if-else` statements?
-10. Should we use `guards` or `pattern matching`?
-11. What is the analog of `guards` in `C++`?
-12. List the characteristics of the linearly recursive process.
-13. List the characteristics of the linearly iterative process.
-14. Is it possible to have a `helper` function that is locally defined and still have a linearly recursive process?
-15. When should the wildcard symbol (`_`) be used?
-16. What is `pattern matching`?
-17. Give three examples of partially applied functions.
-18. Why are brackets not needed when having prefix function application?
-19. Why is using `a`, `b`, `c` for naming parameters considered an anti-pattern?
-20. Should we use `built-in functions` or implement them by ourselves?
-
-**Acceptance criteria:**
-
-1. Answers are written in `Bulgarian`.
-2. An answer is given to every question.
-3. If there are `n` questions in point `x`, you have to give `n` answers.
-4. Answers are present in the body of the email and not in a `.docx` or `.txt` file.
-
-> **Note**: Do not worry if you cannot recall some of the information. Do your best and we will help you with the rest 😇!
-
-### 💫 Task 2
-
-**Description:**
-
-Watch [this](https://www.youtube.com/watch?v=HlgG395PQWw) YouTube video and answer the following questions:
-
-1. What are closures?
-2. What makes closures special?
-3. What are higher order functions?
-4. What are examples of higher order functions?
-5. What are pure functions?
-6. What is immutability?
-7. What is currying?
-8. What are the three core values of being purely functional?
-
-**Acceptance criteria:**
-
-1. Answers are written in `Bulgarian`.
-2. An answer is given to every question.
-3. Answers are present in the body of the email and not in a `.docx` or `.txt` file.
-
 ### ⭐ Task 3
 
 **Description:**
@@ -70,18 +13,6 @@ Define two functions - `isEvenIf` and `isEvenGuards`, that check whether a whole
 5. The types of the parameters match the description.
 6. The types of the parameters match the test cases.
 
-**Test cases:**
-
-```haskell
-print $ isEvenIf 2 == "Yes"
-print $ isEvenIf 15452 == "Yes"
-print $ isEvenIf 321 == "No"
-
-print $ isEvenGuards 2 == "Yes"
-print $ isEvenGuards 15452 == "Yes"
-print $ isEvenGuards 321 == "No"
-```
-
 ### ⭐ Task 4
 
 **Description:**
@@ -96,16 +27,6 @@ Define two functions - `sumCubesPow` and `sumCubesNoPow`, that return the sum of
 4. `sumCubesNoPow` is defined without using the power operator.
 5. The types of the parameters match the description.
 
-**Test cases:**
-
-```haskell
-print $ sumCubesPow 5 1 == 126
-print $ sumCubesPow 10 50 == 126000
-
-print $ sumCubesNoPow 5 1 == 126
-print $ sumCubesNoPow 10 50 == 126000
-```
-
 ### ⭐ Task 5
 
 **Description:**
@@ -117,13 +38,6 @@ Define a function that returns the average of the sum of the squares of two whol
 1. Add one new test case. Place a comment after it with the words `my test`.
 2. All tests pass.
 3. The types of the parameters match the description.
-
-**Test cases:**
-
-```haskell
-print $ sqAvg 5 0 == 12.5
-print $ sqAvg 10 13 == 134.5
-```
 
 ### ⭐ Task 6
 
