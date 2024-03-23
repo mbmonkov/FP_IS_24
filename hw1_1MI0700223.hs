@@ -11,12 +11,10 @@ main = do
     print $ maxPersistenceMinSum 55 105 == 77
     print $ maxPersistenceMinSum 195 756 == 679
     print $ maxPersistenceMinSum 2 85 == 77
-
 -- 1задача
 numStepCombinations :: Integer -> Integer -- приемаме и връщаме Integer, защото при малко по-голям вход, изходното число е много голямо
 numStepCombinations num 
- | num < 0 = error "The number should be non-negative"
- | num == 0 = 0
+ | num <= 0 = error "The number should be positive"
  | otherwise = helper 1 1 num 
   where 
     helper :: Integer -> Integer -> Integer -> Integer
