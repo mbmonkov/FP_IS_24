@@ -14,7 +14,7 @@ main = do
     print $ sortN 55345 == 55543
     print $ sortN 14752  == 75421
     print $ sortN 329450 == 954320
-    print $ sortN 9125 
+    print $ sortN 9125 == 9521
  
 countDigitsRec :: Int -> Int
 countDigitsRec num
@@ -41,6 +41,6 @@ sortN n = helper n 0 (countDigitsRec n)
     helper :: Int -> Int -> Int -> Int
     helper 0 result countDigits = result
     helper n result countDigits
-     | findMaxDigit n == 0 = helper (removeFirstOccurrence (findMaxDigit n)) (result + (findMaxDigit n) * 10^(countDigits - 1)) (countDigits - 1)
-     | otherwise = helper (removeFirstOccurrence (findMaxDigit n)) (result + (findMaxDigit n) * 10^(countDigits - 1)) (countDigits - 1)
+     | findMaxDigit n == 0 = helper (removeFirstOccurrence n (findMaxDigit n)) (result + (findMaxDigit n) * 10^(countDigits - 1)) (countDigits - 1)
+     | otherwise = helper (removeFirstOccurrence n (findMaxDigit n)) (result + (findMaxDigit n) * 10^(countDigits - 1)) (countDigits - 1)
 

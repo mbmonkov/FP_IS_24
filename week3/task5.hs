@@ -9,4 +9,9 @@ main = do
     print $ p 6 == 51
 
 p :: Int -> Int
-p n = div (3*n*n - n) 2
+p 1 = 1 
+p n = helper 1 1 2
+  where
+    helper result current count
+      | count > n = result
+      | otherwise = helper (result + 3 * count - 2) current (count + 1)
