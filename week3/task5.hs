@@ -7,6 +7,7 @@ main = do
     print $ p 4 == 22
     print $ p 5 == 35
     print $ p 6 == 51
+    print $ p 8 == 92 -- my test
 
 p :: Int -> Int
 p 1 = 1 

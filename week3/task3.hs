@@ -9,6 +9,7 @@ main = do
     print $ calcSeriesSum 1 5 == -1.0753246753246755
     print $ calcSeriesSum 1 6 == -1.0762718762718764
     print $ calcSeriesSum 10 34 == -0.10607741100173662
+    print $ calcSeriesSum 2 3 == -0.24761904761904763 -- my test
 
 calcSeriesSum :: Double -> Int -> Double
 calcSeriesSum x n = helper x n 1 1 0 

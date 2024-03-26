@@ -15,6 +15,7 @@ main = do
     print $ sortN 14752  == 75421
     print $ sortN 329450 == 954320
     print $ sortN 9125 == 9521
+    print $ sortN 9217 == 9721 -- my test
  
 countDigitsRec :: Int -> Int
 countDigitsRec num
