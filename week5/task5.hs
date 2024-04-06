@@ -7,5 +7,5 @@ main = do
 
 applyN :: (Num a) => (a -> a) -> Int -> (a -> a)
 applyN f n x
-  | n <= 0    = x
+  | n <= 0 = x
   | otherwise = applyN f (n-1) (f x)

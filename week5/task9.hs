@@ -16,13 +16,13 @@ main = do
     print $ magnitude (10, 20 ,7) == 23.430749027719962 -- my test
 
 
-dotProduct :: Vector -> Vector -> Double
+dotProduct :: (Num a) => Vector a -> Vector a -> a
 dotProduct (x1, y1, z1) (x2, y2, z2) = x1 * x2 + y1 * y2 + z1 * z2
 
-crossProduct :: Vector -> Vector -> Vector
+crossProduct :: (Num a) => Vector a -> Vector a -> Vector a
 crossProduct (x1, y1, z1) (x2, y2, z2) = (y1 * z2 - z1 * y2, z1 * x2 - x1 * z2, x1 * y2 - y1 * x2)
 
-magnitude :: Vector -> Double
-magnitude (x, y, z) = sqrt (x^2 + y^2 + z^2)
+magnitude :: (Floating a) => Vector a -> a
+magnitude (x, y, z) = sqrt $ x^2 + y^2 + z^2
 
-type Vector = (Double, Double, Double)
+type Vector a = (a, a, a)

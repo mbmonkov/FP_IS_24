@@ -8,4 +8,4 @@ main = do
     print $ (repeater "Real Madrid") 3 "!!!" == "Real Madrid!!!Real Madrid!!!Real Madrid" -- my test
 
 repeater :: String -> Int -> String -> String
-repeater str count glue = foldr1 (\a b -> a ++ glue ++ b) (replicate count str)
+repeater str count glue = foldr1 (\x y -> x ++ glue ++ y) (replicate count str)

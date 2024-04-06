@@ -18,12 +18,7 @@ getPrimesHOF :: Int -> Int -> [Int]
 getPrimesHOF x y = filter (\n -> isPrime n && hasDigitSeven n) [min x y .. max x y]
 
 hasDigitSeven :: Int -> Bool
-hasDigitSeven n = elem (intToDigit 7) (show n)
+hasDigitSeven = elem (intToDigit 7) . show
 
 isPrime :: Int -> Bool
-isPrime n = n > 1 && helper 2
- where
-    helper divisor
-     | divisor >= n = True
-     | mod n divisor == 0 = False
-     | otherwise = helper $ divisor + 1
+isPrime n = [1, n] == filter (\ d -> mod n d == 0) [1 .. n]
