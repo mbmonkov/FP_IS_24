@@ -1,81 +1,203 @@
-Задача 1
+### ⭐ Task 1
 
-Дефинирайте функция, която връща простите числа в диапазона (x, y), който съдържа цифрата 7.
+**Description:**
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
-getPrimesLCсе определя чрез разбиране на списък.
-getPrimesLCсе дефинира на един ред код.
-getPrimesHOFсе определя с помощта на функции от по-висок ред.
-getPrimesHOFсе дефинира на един ред код.
+Define a function that returns the prime numbers in the range `(x, y)` that contain the digit `7`.
 
-Задача 2
+**Acceptance criteria:**
 
-Дефинирайте функция, която връща сумата от най-малкия и най-големия делител на палиндром на естествено число, по-голямо от 1.
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+3. `getPrimesLC` is defined using list comprehension.
+4. `getPrimesLC` is defined on a single line of code.
+5. `getPrimesHOF` is defined using higher order functions.
+6. `getPrimesHOF` is defined on a single line of code.
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+**Test cases:**
 
-Задача 3
+```haskell
+print $ getPrimesLC 1 100 == [7,17,37,47,67,71,73,79,97]
+print $ getPrimesLC 100 1 == [7,17,37,47,67,71,73,79,97]
 
-Дефинирайте предикат, който проверява дали поредица от числа образува аритметична прогресия .
+print $ getPrimesHOF 1 100 == [7,17,37,47,67,71,73,79,97]
+print $ getPrimesHOF 100 1 == [7,17,37,47,67,71,73,79,97]
+```
 
-Съвет : Може да намерите оператора !!полезен 😇.
+### ⭐ Task 2
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
-Няма if-elseизявления.
-Без охрана, която се връща Trueи/или Falseприсъства.
+**Description:**
 
-Задача 4
+Define a function that returns the sum of the smallest and greatest palindrome divisors of a natural number greater than `1`.
 
-Дефинирайте функция, която връща сумата от the special numbersв интервала [x, y]( x <= y). Число е special, ако съдържа 6и може да бъде изразено като 4k + 1, където kе цяло число.
+**Acceptance criteria:**
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
-Задачата се решава на един ред код.
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
 
-Задача 5
+**Test cases:**
 
-Дефинирайте функция, която приема функция с един аргумент и я връща приложени nпъти.
+```haskell
+print $ getPalindromes 132465 == 8
+print $ getPalindromes 654546 == 8
+print $ getPalindromes 100001 == 100012
+print $ getPalindromes 21612 == 21614
+print $ getPalindromes 26362 == 26364
+```
 
-Критерии за приемане:
-Всички тестове преминават.
-Използват се типови класове.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+### 🌟 Task 3
 
-Задача 6
+**Description:**
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+Define a predicate that checks whether a sequence of numbers forms an [arithmetic progression](https://en.wikipedia.org/wiki/Arithmetic_progression).
 
-Задача 7
+> **Hint**: You may find the operator `!!` useful 😇.
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+**Acceptance criteria:**
 
-Задача 8
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+3. No `if-else` statements are present.
+4. No guards that return `True` and/or `False` are present.
 
-Дефинирайте функцията repeater str, която получава като аргумент символен niz и връща анонимна функция на два аргумента - countи glue(число и niz). Оценката на обръщението към върнатата функция е низ, която се получава чрез count-кратно повтаряне на низа str, при което между всеки две съседни повторения на strстои низът glue.
+**Test cases:**
 
-Критерии за приемане:
-Всички тестове преминават.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+```haskell
+print $ isArithmetic [3] == True
+print $ isArithmetic [3, 5] == True
+print $ isArithmetic [1, 2, 3, 4, 5] == True
+print $ isArithmetic [3, 5, 7, 9, 11] == True
+print $ isArithmetic [3, 5, 8, 9, 11] == False
+print $ isArithmetic [3, 5, 9, 9, 11] == False
+```
 
-Задача 9
+### ⭐ Task 4
 
-За векторния тип данни, който дефинирахме в класа, дефинирайте следните функции:
- dotProduct: скаларно произведение;
-crossProduct: векторен продукт;
-magnitude: дължина на вектор.
+**Description:**
 
-Критерии за приемане:
-Всички тестове преминават.
-Използват се типови класове.
-Добавете един нов тестов случай. Поставете коментар след него с думите my test.
+Define a function that returns the sum of `the special numbers` in the interval `[x, y]` (`x <= y`). A number is `special` if it contains `6` and can be expressed as `4k + 1`, where `k` is a whole number.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+3. The task is solved on a single line of code.
+
+**Test case:**
+
+```haskell
+print $ specialSum 1 100 == 195 -- 61, 65, 69
+```
+
+### 🌟 Task 5
+
+**Description:**
+
+Define a function that takes a single argument function and returns it applied `n` times.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Typeclasses are used.
+3. Add one new test case. Place a comment after it with the words `my test`.
+
+**Test cases:**
+
+```haskell
+print $ (applyN (\x -> 2 * x) 5) 2 == 64
+print $ (applyN (\x -> div x 10) 2) 100 == 1
+```
+
+Explanation for test case 1:
+
+```text
+We apply 2 * x first to 2, then to (2 * 2) and so on. Thus, we get: (((((2 * 2) * 2) * 2) * 2) * 2) => ((((4 * 2) * 2) * 2) * 2) => (((8 * 2) * 2) * 2) => ((16 * 2) * 2) => (32 * 2) => 64
+```
+
+### 💫 Task 6
+
+**Description:**
+
+![Alt text](assets/forHomeTask5.png?raw=true "forHomeTask5.png")
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+
+**Test cases:**
+
+```haskell
+print $ (pairCompose [(+1), (+2)]) 1 == 5 -- ((1 + 2) + 1) + 1
+print $ (pairCompose [(+1), (+2), (+3)]) 1 == 8
+```
+
+### 💫 Task 7
+
+**Description:**
+
+![Alt text](assets/forHomeTask6.png?raw=true "forHomeTask6.png")
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+
+**Test cases:**
+
+```haskell
+print $ (switchSum (\x -> x + 1) (\x -> x * 2) 1) 2 == 3
+print $ (switchSum (\x -> x + 1) (\x -> x * 2) 2) 2 == 9
+print $ (switchSum (\x -> x + 1) (\x -> x * 2) 3) 2 == 16
+print $ (switchSum (\x -> x + 1) (\x -> x * 2) 4) 2 == 30
+```
+
+### 💫 Task 8
+
+**Description:**
+
+Дефинирайте функция `repeater str`, която получава като аргумент символен низ и връща анонимна функция на два аргумента - `count` и `glue` (число и низ). Оценката на обръщението към върнатата функция е низ, който се получава чрез `count`-кратно повтаряне на низа `str`, при което между всеки две съседни повторения на `str` стои низът `glue`.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Add one new test case. Place a comment after it with the words `my test`.
+
+**Test cases:**
+
+```haskell
+print $ (repeater "I love Haskell") 3 " " == "I love Haskell I love Haskell I love Haskell"
+print $ (repeater "Quack") 5 "!" == "Quack!Quack!Quack!Quack!Quack"
+```
+
+### ⭐ Task 9
+
+**Description:**
+
+For the Vector data type we defined in class, define the following functions:
+
+- `dotProduct`: scalar product;
+- `crossProduct`: vector product;
+- `magnitude`: length of a vector.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Typeclasses are used.
+3. Add one new test case. Place a comment after it with the words `my test`.
+
+**Test cases:**
+
+```haskell
+print $ dotProduct (1, 2, 3) (7, 4, 1) == 18
+print $ dotProduct (5, 2, 159) (0, -1, -2) == (-320)
+
+print $ crossProduct (1, 2, 3) (7, 4, 1) == (-10, 20, -10)
+print $ crossProduct (5, 2, 159) (0, -1, -2) == (155, 10, -5)
+
+print $ magnitude (1, 2, 3) == 3.7416573867739413
+print $ magnitude (7, 4, 1) == 8.12403840463596
+print $ magnitude (-10, 20, -10) == 24.49489742783178
+print $ magnitude (5, 2, 159) == 159.0911688309568
+print $ magnitude (0, -1, -2) == 2.23606797749979
+print $ magnitude (155, 10, -5) == 155.40270267920053
+```
