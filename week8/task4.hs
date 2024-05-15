@@ -19,5 +19,5 @@ getAreas :: Floating a => [Shape a] -> [a]
 getAreas = map area
 
 maxArea :: (Floating a, Ord a) => [Shape a] -> Shape a
-maxArea shs = foldl1 (\sh hs -> if area sh > area hs then sh else hs) shs
+maxArea  = foldl1 (\sh hs -> if area sh > area hs then sh else hs) 
 
